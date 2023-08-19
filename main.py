@@ -55,11 +55,11 @@ connection_status_frame = tk.Frame(app)
 
 # Create U buttons for control
 up_button = tk.Button(throttle_buttons_frame, text="Up")
-down_button = tk.Button(direction_buttons_frame, text="Down")
+down_button = tk.Button(throttle_buttons_frame, text="Down")
 
 # Create arrow buttons for control
-forward_button = tk.Button(direction_buttons_frame, text="Up")
-backward_button = tk.Button(direction_buttons_frame, text="Down")
+forward_button = tk.Button(direction_buttons_frame, text="Forward")
+backward_button = tk.Button(direction_buttons_frame, text="Backward")
 left_button = tk.Button(direction_buttons_frame, text="Left")
 right_button = tk.Button(direction_buttons_frame, text="Right")
 
@@ -69,11 +69,13 @@ connection_label = tk.Label(connection_status_frame, textvariable=connection_sta
 
 up_button.grid(row=0, column=1, padx=10, pady=5)
 down_button.grid(row=2, column=1, padx=10, pady=5)
+
+forward_button.grid(row=0, column=1, padx=10, pady=5)
+backward_button.grid(row=2, column=1, padx=10, pady=5)
 left_button.grid(row=1, column=0, padx=10, pady=5)
 right_button.grid(row=1, column=2, padx=10, pady=5)
 
 connection_label.pack(side=tk.LEFT, padx=10)
-
 # Pack the frames using .grid()
 throttle_buttons_frame.grid(row=0, column=0)
 direction_buttons_frame.grid(row=0, column=1)
